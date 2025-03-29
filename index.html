@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación Especial</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100vh;
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper fontAllura">
+              <div class="swiper-slide" id="slide1">
+                <img src="rosa.png" />
+                <div>
+                    <h1 id="name" class="fontLeJour">Rocio</h1>
+                    <h2>Mis 15 años</h2>
+                  </div>
+                <img src="mariposas.png" />
+              </div>
+                <div class="swiper-slide" id="slide2">
+                      <p>Un dia muy especial esta por llegar<br/>
+                      y es muy importante para mi</br>
+                      celebrarlo juntos.</p>
+                      <img src="rosas.png">
+                  </div>
+              <div class="swiper-slide" id="slide3">
+                  <div class="row">
+                    <img src="rosa.png"/>
+                    <div class="column">
+                      <p> Salon Multifiesta Bahia <br> Sixto Laspiur 2551</p>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.51416420411!2d-62.30713078958417!3d-38.70600278543691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbb77250b6571%3A0x8576eef2e6df7c84!2sDr.%20Sixto%20Laspiur%202551%2C%20B8000BJW%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1742988478651!5m2!1ses!2sar" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                </div>
+              <div class="swiper-slide" id="slide4">
+                <div class="row">
+                      <img src="calendar.png">
+                      <p>
+                          Sabado 19 de Abril <br>21:00 hs <br>(hasta las 05:00)
+                      </p>
+                      <img src="clock.png">
+                  </div>
+                  <div>
+                      <span id="cuentaRegresiva"></span>
+                  </div>
+              </div>
+              <div class="swiper-slide" id="slide5">
+                  <p>Codigo de Vestimenta:<br>Elegante Sport</p>
+                  <p>El mejor regalo es que estes conmigo<br>presente, pero si quieres hacerme un regalo<br>podes hacerlo a esta cuenta.</p>
+                  <p>rocio.millonaria.mp</p>
+                  <img src="vestimenta.png">
+              </div>
+            <div class="swiper-slide " id="slide6">
+                <p id="button">Confirmar Asistencia</p>
+                <p>Espero contar<br>con tu presencia</p>
+                <img src="rosas2.png">
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+      });
+
+      const countDownDate = new Date("Apr 19, 2025 21:00:00").getTime();
+
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("cuentaRegresiva").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("cuentaRegresiva").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+  </body>
+</html>

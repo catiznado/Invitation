@@ -1,0 +1,131 @@
+@font-face {
+    font-family: LeJourScript;
+    src: url("LeJourScript-Eaqpg.otf")
+}
+
+@font-face {
+    font-family: Allura;
+    src: url("Allura-Regular.ttf")
+}
+
+.fontLeJour {
+    font-family: LeJourScript;
+    font-weight: 100;
+}
+
+.fontAllura, h2 {
+    font-family: Allura;
+    font-weight: 100;
+    font-size: 6vw;
+    text-align: center;
+}
+
+#name{
+    font-size: 12vw;
+    margin-top: 2vh;
+    margin-bottom: 0;
+}
+
+#slide1 h2 {
+    font-size:10vw;
+    margin-top: -7vh;
+    margin-left: -6vw;
+}
+
+#slide2 img{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#slide2 p {
+    margin-top: 0vh;
+    text-align: center;
+}
+
+#slide3 .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#slide3 .column {
+    margin-top: 60vh;
+    flex-direction: column;
+}
+
+#slide3 img {
+    height: 85%;
+    bottom: 0;
+    margin:0;
+}
+
+#slide3 p {
+    margin: 0;
+    margin-top: -50vh;
+}
+
+#slide4 {
+    display: flex;
+    flex-direction: column;
+}
+
+#slide4 .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#slide4 .row p {
+    margin: 0
+}
+
+#slide4 img {
+    margin: 0 2vw;
+    height: 40%;
+}
+
+#cuentaRegresiva {
+    border-color: white;
+    border: 2px solid;
+    padding: 0 1vw;
+}
+
+#slide5 {
+    display: flex;
+    flex-direction: column;
+}
+
+#slide5 img, #slide6 img {
+    bottom: -1vw;
+    z-index:-1;
+    position: absolute;
+}
+
+#slide5 p {
+    font-size: 3.5vw;
+    display: inline-block;
+    text-align: start;
+    margin-bottom: 2.5vw;
+    margin-top: 0vw;
+    margin-left: 20vw;
+    position: relative;
+    top: -3.5vw
+}
+
+#slide6 {
+    display: flex;
+    flex-direction: column;
+}
+
+#slide6 p{
+    margin: 1vw 0;
+}
+
+#slide6 #button {
+    background-color: grey;
+    font-size: 4vw;
+    padding: 1vw;
+    border-radius: 2vw 2vw;
+    color: black;
+    text-decoration: underline;
+}
