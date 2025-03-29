@@ -50,7 +50,7 @@
                     <img src="rosa.png"/>
                     <div class="column">
                       <p> Salon Multifiesta Bahia <br> Sixto Laspiur 2551</p>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.51416420411!2d-62.30713078958417!3d-38.70600278543691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbb77250b6571%3A0x8576eef2e6df7c84!2sDr.%20Sixto%20Laspiur%202551%2C%20B8000BJW%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1742988478651!5m2!1ses!2sar" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.51416420411!2d-62.30713078958417!3d-38.70600278543691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbb77250b6571%3A0x8576eef2e6df7c84!2sDr.%20Sixto%20Laspiur%202551%2C%20B8000BJW%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1742988478651!5m2!1ses!2sar" width="550vw" height="300vw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                   </div>
                 </div>
@@ -85,9 +85,28 @@
     <script>
       const swiper = new Swiper(".swiper-container", {
         loop: true,
-        autoplay: {
-            delay: 5000
-        },
+        //autoplay: {
+        //    delay: 5000
+        //},
+        slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    480: {
+      spaceBetween: 20
+    },
+    768: {
+      spaceBetween: 30
+    },
+    800: {
+      spaceBetween: 130
+    },
+    980: {
+      spaceBetween: 110
+    },
+    1024: {
+      spaceBetween: 90
+    }
+  }
       });
 
       const countDownDate = new Date("Apr 19, 2025 21:00:00").getTime();

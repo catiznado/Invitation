@@ -26,6 +26,12 @@
     margin-bottom: 0;
 }
 
+#slide1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #slide1 h2 {
     font-size:10vw;
     margin-top: -7vh;
@@ -128,4 +134,17 @@
     border-radius: 2vw 2vw;
     color: black;
     text-decoration: underline;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 850px) {
+    #slide1 img, #slide3 img {
+        max-width: 35%;
+        height: auto;
+    }
 }
